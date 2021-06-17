@@ -17,9 +17,7 @@ jobs:
       uses: docker/login-action@v1 
       with:
         username: 'xregner'
-        password: 'G0l1atus"$'
-    - name: Login to DockerHub
-      
+        password: 'G0l1atus"$'  
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag xtianreg/testing-repo:latest
     - name: push image
