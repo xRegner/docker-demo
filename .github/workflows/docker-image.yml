@@ -18,8 +18,8 @@ jobs:
       with:
         username: 'xregner'
         password: 'G0l1atus"$'  
-    - name: Build the Docker image
     - uses: actions/checkout@v2
+    - name: Build the Docker image
       run: docker build . --file Dockerfile --tag xtianreg/testing-repo:latest
     - name: push image
       run: docker push xtianreg/testing-repo:latest
