@@ -13,7 +13,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - name: Login to DockerHub
+      uses: docker/login-action@v1 
+      with:
+        username: 'xregner'
+        password: 'G0l1atus"$'
+    - name: Login to DockerHub
+      
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag xtianreg/testing-repo:latest
     - name: push image
